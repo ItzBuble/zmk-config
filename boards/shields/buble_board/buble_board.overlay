@@ -36,10 +36,10 @@
         //    ;
 
         input-gpios
-              = <&xiao_d 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-              , <&xiao_d 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-              , <&xiao_d 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-              , <&xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+              = <&mcp 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+              , <&mcp 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+              , <&mcp 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+              , <&mcp 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
               ;
     };
 
@@ -53,5 +53,20 @@
         map = <
             RC(0, 0) RC(0, 1) RC(1, 0) RC(1, 1)
         >;
+    };
+};
+
+&i2c0 {
+    status = "okay";
+    mcp: mcp23017@20 {
+        compatible = "microchip,mcp230xx";
+        status = "okay";
+        gpio-controller;
+        wakeup-source;
+        reg = <0x20>;
+        #gpio-cells = <2>;
+        ngpios = <16>;
+        int-gpios = <&xiao_d 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        label = "MCP23017";
     };
 };
