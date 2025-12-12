@@ -1,0 +1,6 @@
+if SHIELD_BUBLE_BOARD
+
+config ZMK_KEYBOARD_NAME
+    default "buble_board"
+
+endif # SHIELD_BUBLE_BOARD
