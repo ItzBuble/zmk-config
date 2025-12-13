@@ -59,7 +59,7 @@
 &xiao_i2c {
     status = "okay";
 
-    mcp1: mcp23017@20 {
+    mcp1: mcp23017@24 {
         compatible = "microchip,mcp230xx";
         status = "okay";
         gpio-controller;
