@@ -67,7 +67,7 @@
         reg = <0x24>;
         #gpio-cells = <2>;
         ngpios = <16>;
-        int-gpios = <&xiao_d 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        int-gpios = <&xiao_d 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
     };
 
     mcp2: mcp23017@20 {
