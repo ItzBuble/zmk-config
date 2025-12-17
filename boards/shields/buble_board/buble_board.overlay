@@ -82,6 +82,20 @@
             RC(5, 0) RC(5, 1) RC(5, 2)                   RC(5, 5)                   RC(5, 8) RC(5, 9)                     RC(5, 12) RC(5, 13) RC(5, 14) RC(5, 15) RC(5, 16) RC(5, 17)           RC(5, 19)
         >;
     };
+
+    encoder: encoder {
+        compatible = "alps,ec11";
+        label = "encoder";
+        a-gpios = <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <80>;
+        status = "okay";
+    };
+
+    sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&encoder>;
+    };
 };
 
 &xiao_i2c {
