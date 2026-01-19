@@ -32,7 +32,6 @@
                 &none  &none        &none           &none         &none  &none  &none  &none  &none  &none  &none                       &none  &none         &none  &none  &none  &none
                 &none  &none        &none                                &none                &none  &none                &none  &none  &none  &none  &none  &none         &none
             >;
-            sensor-bindings = <&none &none>;
         };
     };
 };
