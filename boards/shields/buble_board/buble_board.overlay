@@ -86,7 +86,6 @@
     left_encoder: encoder_left {
         compatible = "alps,ec11";
         label = "encoder";
-        wakeup-source;
         a-gpios = <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <80>;
