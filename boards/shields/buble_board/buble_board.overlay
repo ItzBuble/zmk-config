@@ -126,5 +126,5 @@
 };
 
 nice_view_spi: &xiao_spi {
-    cs-gpios = <&xiao_d 2 GPIO_ACTIVE_HIGH>;
+    cs-gpios = <&xiao_d 7 GPIO_ACTIVE_HIGH>;
 };
