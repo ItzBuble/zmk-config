@@ -47,6 +47,7 @@
             , <&mcp2 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // Column 18
             , <&mcp2 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>    // Column 19
             , <&mcp2 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>    // Column 20
+            , <&xiao_d 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // Column 21 = Reset
             ;
 
         row-gpios
@@ -56,6 +57,7 @@
             , <&mcp2 2 GPIO_ACTIVE_LOW> // Row 3
             , <&mcp2 1 GPIO_ACTIVE_LOW> // Row 4
             , <&mcp2 0 GPIO_ACTIVE_LOW> // Row 5
+            , <&xiao_d 2 GPIO_ACTIVE_LOW>  // Row 6 = Reset
             ;
 
         //input-gpios
@@ -80,6 +82,7 @@
             RC(3, 0) RC(3, 1) RC(3, 2) RC(3, 3) RC(3, 4) RC(3, 5) RC(3, 6) RC(3, 7) RC(3, 8) RC(3, 9) RC(3, 10) RC(3, 11)                     RC(3, 14) RC(3, 15) RC(3, 16) RC(3, 17) RC(3, 18) RC(3, 19)
             RC(4, 0) RC(4, 1) RC(4, 2) RC(4, 3) RC(4, 4) RC(4, 5) RC(4, 6) RC(4, 7) RC(4, 8) RC(4, 9) RC(4, 10)                               RC(4, 14) RC(4, 15)           RC(4, 17) RC(4, 18) RC(4, 19) RC(4, 20)
             RC(5, 0) RC(5, 1) RC(5, 2)                   RC(5, 5)                   RC(5, 8) RC(5, 9)                     RC(5, 12) RC(5, 13) RC(5, 14) RC(5, 15) RC(5, 16) RC(5, 17)           RC(5, 19)
+                                                                                                                                                                                                                    RC(6,21)
         >;
     };
 
